@@ -1,0 +1,6 @@
+[tools]
+terraform = "1.9.5" # use latest version of terraform
+
+[env]
+AWS_ACCESS_KEY_ID = "" # using environment variables for terraform aws provider
+AWS_SECRET_ACCESS_KEY = ""

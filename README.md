@@ -1,3 +1,3 @@
-# passingbreeze-repo-template
+# Quick Power Usage
 
-Repo Template for Passingbreeze's Side Project
+Quicksight for Power Usage from AI Nation
