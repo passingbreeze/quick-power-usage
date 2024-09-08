@@ -301,4 +301,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# mise toml for local environment
 mise.toml
