@@ -1,6 +1,6 @@
 terraform {
   backend "local" {
-    path = "data/terraform.tfstate"
+    path = "services/terraform.tfstate"
   }
 }
 
@@ -18,13 +18,6 @@ provider "aws" {
 
 data "aws_caller_identity" "current" {}
 
-module "power_usage_data_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-  bucket = "power-usage-data-bucket"
-}
 
-module "power_usage_query_result_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-  bucket = "power-usage-query-result-bucket"
-}
+
 

@@ -25,15 +25,15 @@ data "aws_caller_identity" "current" {}
 # data source bucket
 data "aws_iam_policy_document" "data_source_bucket_policy" {
   statement {
+    sid       = "AllowS3ActionsForQuickSight"
+    effect    = "Allow"
     principals {
-      type        = "AWS"
-      identifiers = ["arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"]
+      type        = "Service"
+      identifiers = ["quicksight.amazonaws.com"]
     }
 
     actions = [
-      "s3:ListBucket",
-      "s3:GetObject",
-      "s3:GetObjectVersion"
+      "s3:*"
     ]
 
     resources = [
